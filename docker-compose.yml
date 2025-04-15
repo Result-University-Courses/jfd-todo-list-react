@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+    frontend:
+        build: .
+        container_name: jfd-to-do-list-react
+        ports:
+            - '8088:80'
+        depends_on:
+            - json-server
+
+    json-server:
+        image: node:16
+        container_name: json-server
+        working_dir: /app
+        volumes:
+            - .:/app
+        command: npx json-server@0.17.4 --watch src/db.json --port 3003
+        ports:
+            - '3003:3003'
