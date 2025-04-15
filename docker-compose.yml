@@ -10,11 +10,9 @@ services:
             - json-server
 
     json-server:
-        image: node:16
+        build:
+            context: .
+            dockerfile: Dockerfile.json-server
         container_name: json-server
-        working_dir: /app
-        volumes:
-            - .:/app
-        command: npx json-server@0.17.4 --watch src/db.json --port 3003
         ports:
             - '3003:3003'
