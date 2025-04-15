@@ -17,7 +17,7 @@ services:
             dockerfile: Dockerfile.json-server
         container_name: json-server
         ports:
-            - '3003:3003'
+            - '8089:80'
         networks:
             - jfd-network
 
