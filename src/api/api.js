@@ -1,7 +1,7 @@
 import { HTTP_METHOD } from '../constants';
 
 const fetchServer = (method, { id, ...payload } = {}) => {
-	let url = `http://localhost:3003/todos`;
+	let url = process.env.REACT_APP_API_URL;
 	let options = {
 		method,
 		headers: { 'Content-Type': 'application/json' },
