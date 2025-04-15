@@ -2,5 +2,5 @@ FROM node:16
 WORKDIR /app
 COPY src/db.json .
 RUN npm install -g json-server@0.17.4
-EXPOSE 3003
-CMD ["json-server", "--watch", "db.json", "--port", "3003"]
+EXPOSE 80
+CMD ["json-server", "--watch", "db.json", "--port", "8089"]
