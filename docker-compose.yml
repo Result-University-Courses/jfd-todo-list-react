@@ -17,10 +17,6 @@ services:
             dockerfile: Dockerfile.json-server
         container_name: json-server
         ports:
-            - '8089:80'
+            - '8089:3000'
         networks:
             - jfd-network
-
-networks:
-    jfd-network:
-        driver: bridge
