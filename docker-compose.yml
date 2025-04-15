@@ -8,8 +8,6 @@ services:
             - '8088:80'
         depends_on:
             - json-server
-        networks:
-            - jfd-network
 
     json-server:
         build:
@@ -18,5 +16,3 @@ services:
         container_name: json-server
         ports:
             - '8089:3000'
-        networks:
-            - jfd-network
